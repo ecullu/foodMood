@@ -8,20 +8,19 @@ import DishesView from './views/dishesView'
 import ComposeView from './views/composeView'
 import {User} from './models/models'
 
-//STEP 5 (build your client side api routes)
 const app = function() {
 
     var AppRouter = Backbone.Router.extend ({
         routes: {
             'home': 'goHome',
-            'dish/postDishes': 'handleDishPost', // VVV these routes were determined by the routes we used in the Header
+            'dish/postDishes': 'handleDishPost', 
             'dish/myDishes': 'handleMyPosts',
             'login': 'handleLogin',
             '*catchall': 'redirectHome'
         },
 
         goHome: function() {
-            ReactDOM.render(<Dashboard />, document.querySelector('.container')) //don't need to pass anything onto props because we will be doing that in the store
+            ReactDOM.render(<Dashboard />, document.querySelector('.container'))
         },
 
         handleDishPost: function() {
@@ -40,7 +39,7 @@ const app = function() {
             location.hash = 'home'
         },
 
-        initialize: function() { //good way to add logic to check if a user is logged in to protect certain routes
+        initialize: function() {
             Backbone.history.start()
             this.on('route', function(handlerName){
                 if(!User.getCurrentUser()){

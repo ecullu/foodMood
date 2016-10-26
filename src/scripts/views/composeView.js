@@ -60,9 +60,7 @@ const DishPostingForm = React.createClass({
 		let ratingArr = []
 		let ratedStyle = {color: 'yellow'}
 		let unratedStyle = {color: 'black'}
-		// if(this.state.dishRating > 0){
 
-		// }
 		for( let i = 1; i <= this.state.dishRating; i++){
 			ratingArr.push(<span style={ratedStyle} onClick={this._handleRating} key={i} data-rating={i} >&#9733;</span>)
 		}
@@ -74,7 +72,7 @@ const DishPostingForm = React.createClass({
 		console.log('rating array', ratingArr)
 		return ratingArr
 	},
-// {this._starJsxArray()}
+
 	render: function() {
 		return (
 			<div className="dishPostingForm">

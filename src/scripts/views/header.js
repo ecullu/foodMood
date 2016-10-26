@@ -1,5 +1,3 @@
-//COPIED FROM MONGO MESSAGES
-
 import React from 'react'
 import ACTIONS from '../actions'
 
@@ -17,7 +15,7 @@ const Header = React.createClass({
 const NavBar = React.createClass({
     render: function() {
         return (
-            <div id="navBar"> {/*made a few edits here so that is makes sense for this app*/}
+            <div id="navBar"> 
                 <a href="#login">Log In</a>
                 <a href="#home">Home</a>
                 <a href="#dish/myDishes">My Dishes</a>

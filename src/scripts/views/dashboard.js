@@ -69,8 +69,6 @@ const Dish = React.createClass({
 
 	render: function() {
 		console.log(this.props.dishModel.id)
-		// console.log(this.props.dishModel.get('title'))
-		// console.log(this.props.dishModel.get('likes').length)
 		let rating = ""
 		for(let i = 0; i < this.props.dishModel.get('rating'); i++){
 			rating += String.fromCharCode(9733)

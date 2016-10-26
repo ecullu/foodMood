@@ -59,7 +59,6 @@ const ACTIONS = {
         })
     },
     likeDish: function(dish, userObj){
-        // console.log(User.getCurrentUser()._id)
         console.log('disn in likes',dish)
         if(!dish.get('likes').includes(userObj._id)){
             dish.set({
